@@ -5,25 +5,31 @@
   <title>Калькулятор</title>
   <style type="text/css">
     .tblCalc{
-    border:1px solid gray;
+    border:2px solid blue;
     margin:0;
     padding:0;
     width:250px;
     text-align:center;
   }
   .tblCalc input{
-    border:1px solid gray;
+    border:2px solid red;
     width:30px;
     margin:4px;
   }
     #btnWide{
     width:80px;
+    background-color:yellow;
   }
   #editWide{
     width:250px;
+    background-color:white;
   }
   td {
-  background-color:#999;
+  background-color:#555;
+  }
+
+  input{
+  background-color:yellow;
   }
   }
 </style>
@@ -92,14 +98,10 @@
      </table>
 </form>
   <script language="JavaScript">
-
-
 var Fcalc = document.calc;
 var Currents = 0;
 var FlagNewNum = false;
 var PendingOp = "";
-
-
 // обработчик нажатия 
 // цифровой кнопки
 function NumPressed (Num) 
@@ -175,11 +177,7 @@ function Clear ()
     Currents = 0;
     PendingOp = "";
     ClearEntry();
-
 }
-
-
-
 // меняем знак текущего результата
 function Neg () 
 {
